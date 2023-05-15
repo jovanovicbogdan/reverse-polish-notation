@@ -1,6 +1,6 @@
 package com.rpn;
 
-import java.util.Stack;
+import java.util.ArrayDeque;
 
 public class ReversePolishNotation {
 
@@ -10,7 +10,8 @@ public class ReversePolishNotation {
   }
 
   public static int evaluateReversePolishNotation(String[] tokens) {
-    Stack<Integer> evaluation = new Stack<>();
+    // Stack<Integer> evaluation = new Stack<>();
+    ArrayDeque<Integer> evaluation = new ArrayDeque<>();
 
     for (String token : tokens) {
       if (isOperator(token)) {
